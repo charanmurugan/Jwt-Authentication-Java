@@ -1,0 +1,1 @@
+insert into user_details(name,city,email) values('charan','chennai','abc@gmail.com'),('vicky','chennai','xyz@gmail.com')
