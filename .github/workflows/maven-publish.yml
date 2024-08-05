@@ -23,4 +23,4 @@ jobs:
       run: mvn clean install
 
     - name: Deploy to Nexus
-      run: mvn deploy
+      run: mvn deploy -DskipTests
