@@ -4,3 +4,4 @@
 
 It works fine when pull request raised it automatically scans
 mail trigger checking for pull requests
+Integrated with jira for smooth interaction
