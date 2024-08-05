@@ -23,7 +23,7 @@ jobs:
       run: mvn clean install
       
     - name: Print Environment Values
-      run: echo "${NEXUS_USERNAME}" "${NEXUS_PASSWORD}"
+      run: echo "${{NEXUS_USERNAME}}" "${{NEXUS_PASSWORD}}"
 
     - name: Deploy to Nexus
       run: mvn deploy --settings .github/settings.xml
