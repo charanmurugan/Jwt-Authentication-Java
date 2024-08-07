@@ -28,13 +28,5 @@ jobs:
         sed  's/NEXUS_USERNAME/admin/g' .github/settings.xml
         sed  's/NEXUS_PASSWORD/admin@123/g' .github/settings.xml
         
-    - name: Commit changes
-      run: |
-        git config --global user.name 'github-actions[bot]'
-        git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-        git add .github/settings.xml
-        git commit -m 'Updated settings.xml with sed'
-        git push
-  
     - name: Deploy to Nexus
       run: mvn deploy --settings .github/settings.xml
