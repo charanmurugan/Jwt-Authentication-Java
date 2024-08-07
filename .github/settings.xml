@@ -4,13 +4,13 @@
     <servers>
         <server>
             <id>releasenexus</id>
-             <username>admin</username>
-             <password>admin@123</password>
+             <username>NEXUS_USERNAME</username>
+             <password>NEXUS_PASSWORD</password>
         </server>
         <server>
             <id>snapshots</id>
-             <username>${env.NEXUS_USERNAME}</username>
-             <password>${env.NEXUS_PASSWORD}</password>
+             <username>NEXUS_USERNAME</username>
+             <password>NEXUS_PASSWORD</password>
         </server>
     </servers>
     <mirrors>
