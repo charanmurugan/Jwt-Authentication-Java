@@ -22,11 +22,11 @@ jobs:
     - name: Build with Maven
       run: mvn clean install
       
-    - name: Print Environment Values
-      env:
-        NEXUS_USERNAME: ${{ secrets.NEXUS_USERNAME }}
-        NEXUS_PASSWORD: ${{ secrets.NEXUS_PASSWORD }}
-      run: echo "$NEXUS_USERNAME $NEXUS_PASSWORD"
-
+    - name: Use `sed` to replace text
+      run: |
+        # Replace 'foo' with 'bar' in example.txt
+        sed  's/NEXUS_USERNAME/${{ secrets.NEXUS_USERNAME }}/g' .github/settings.xml
+        sed  's/NEXUS_PASSWORD/${{ secrets.NEXUS_PASSWORD }}/g' .github/settings.xml
+  
     - name: Deploy to Nexus
       run: mvn deploy --settings .github/settings.xml
