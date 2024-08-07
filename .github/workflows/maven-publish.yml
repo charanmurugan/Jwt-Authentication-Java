@@ -25,8 +25,8 @@ jobs:
     - name: Use `sed` to replace text
       run: |
         # Replace 'foo' with 'bar' in example.txt
-        sed  's/NEXUS_USERNAME/${{ secrets.NEXUS_USERNAME }}/g' .github/settings.xml
-        sed  's/NEXUS_PASSWORD/${{ secrets.NEXUS_PASSWORD }}/g' .github/settings.xml
+        sed  's/NEXUS_USERNAME/admin/g' .github/settings.xml
+        sed  's/NEXUS_PASSWORD/admin@123/g' .github/settings.xml
   
     - name: Deploy to Nexus
       run: mvn deploy --settings .github/settings.xml
