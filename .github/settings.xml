@@ -4,7 +4,7 @@
     <servers>
         <server>
             <id>releasenexus</id>
-             <username>NEXUS_USERNAME</username>
+             <username>admin</username>
              <password>NEXUS_PASSWORD</password>
         </server>
         <server>
